@@ -22,7 +22,10 @@ function action_prolonger_abonnement_dist($arg = null) {
 		$arg = $securiser_action();
 	}
 
-	list($id_abonnement, $nb, $unite) = explode('-', $arg);
+	$composants_arg = array_filter(explode('-', $arg));
+	$id_abonnement = (int) ($composants_arg[0] ?? 0);
+	$nb = $composants_arg[1] ?? null;
+	$unite = $composants_arg[2] ?? null;
 
 	include_spip('inc/autoriser');
 	if (

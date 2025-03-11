@@ -26,7 +26,8 @@ function action_resilier_abonnement_dist($arg = null) {
 	$resilier = charger_fonction('resilier', 'abos');
 	$raison = (test_espace_prive() ? 'resil BO par admin' : 'resil par client');
 	if ($id_abonnement = intval($arg)) {
-		list(, $immediat) = explode('-', $arg);
+		$composants_arg = array_filter(explode('-', $arg));
+		$immediat = $composants_arg[1] ?? null;
 		$immediat = ($immediat == 'echeance') ? false : true;
 	} elseif (
 		substr($arg, 0, 3) == 'uid'
