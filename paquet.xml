@@ -6,7 +6,7 @@
 	compatibilite="[4.1.0;4.*]"
 	logo="abos.svg"
 	documentation=""
-	schema="2.4.6"
+	schema="2.4.7"
 >
 
 	<nom>Abonnements</nom>

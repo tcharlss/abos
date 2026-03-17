@@ -94,6 +94,11 @@ function abos_upgrade($nom_meta_base_version, $version_cible) {
 		['maj_tables', ['spip_abo_offres']],
 	];
 
+	// Nouveaux index id_auteur et id_abo_offre
+	$maj['2.4.7'] = [
+		['maj_tables', ['spip_abonnements']],
+	];
+
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
 }

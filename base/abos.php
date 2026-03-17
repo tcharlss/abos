@@ -133,6 +133,8 @@ function abos_declarer_tables_objets_sql($tables) {
 		'key' => [
 			'PRIMARY KEY'        => 'id_abonnement',
 			'KEY statut'         => 'statut',
+			'KEY id_abo_offre'   => 'id_abo_offre',
+			'KEY id_auteur'      => 'id_auteur',
 		],
 		'titre' => "abonne_uid AS titre, '' AS lang",
 		'date' => 'date',
